@@ -3,10 +3,23 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="2dp"/>
+
     <CheckBox
         android:id="@+id/task"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="18dp"
+        android:text="Some task"
         />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray" />
 
 </LinearLayout>

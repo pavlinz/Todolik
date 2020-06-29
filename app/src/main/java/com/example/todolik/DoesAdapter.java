@@ -1,7 +1,6 @@
 package com.example.todolik;
 
 import android.content.Context;
-import android.provider.ContactsContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,12 +11,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class DataAdapter extends RecyclerView.Adapter {
+public class DoesAdapter extends RecyclerView.Adapter<DoesAdapter.MyViewHolder> {
 
     Context _context;
     ArrayList<Task> _tasks;
 
-    public DataAdapter(Context context, ArrayList<Task> tasks) {
+    public DoesAdapter(Context context, ArrayList<Task> tasks) {
         _context = context;
         _tasks = tasks;
     }
@@ -26,7 +25,7 @@ public class DataAdapter extends RecyclerView.Adapter {
     // onCreateViewHolder: возвращает объект ViewHolder, который будет хранить данные по одному объекту Task.
     @NonNull
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         return new MyViewHolder(LayoutInflater.from(_context).inflate(R.layout.task, parent,false));
     }
 
