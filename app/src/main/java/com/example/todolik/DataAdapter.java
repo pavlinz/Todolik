@@ -1,12 +1,25 @@
 package com.example.todolik;
 
+import android.content.Context;
+import android.provider.ContactsContract;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
+
 public class DataAdapter extends RecyclerView.Adapter {
+
+    Context _context;
+    ArrayList<Task> _tasks;
+
+    public DataAdapter(Context context, ArrayList<Task> tasks) {
+        _context = context;
+        _tasks = tasks;
+    }
 
     @NonNull
     @Override
@@ -28,6 +41,7 @@ public class DataAdapter extends RecyclerView.Adapter {
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            task = (CheckBox)itemView.findViewById(R.id.task);
         }
     }
 }
